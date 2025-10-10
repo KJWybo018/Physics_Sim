@@ -9,3 +9,6 @@ plt.ion()
 for _ in range(500):
     engine.step()
     plot_particles(engine.getParticles())
+
+plt.savefig("snapshot.png")
+
