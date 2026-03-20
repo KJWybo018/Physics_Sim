@@ -12,3 +12,13 @@ This project simulates a 2D particle system using a C++ physics engine and a Pyt
 - Export visual snapshots of simulation
 
 ## 🗂️ Structure
+    Build
+    # 1. Install pybind11
+    pip install pybind11
+    
+    # 2. Configure and build
+    mkdir build && cd build
+    cmake .. -DCMAKE_PREFIX_PATH=$(python -c "import pybind11; print(pybind11.get_cmake_dir())")
+    make -j$(nproc)
+    
+    # The .so is placed in python/ automatically
